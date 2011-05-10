@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     }else{
         abort();
     }
+    QObject::connect(ui->action_OPEN, SIGNAL(triggered()), this, SLOT(open()));
  }
 
 MPTabView *MainWindow::TabView(){
@@ -31,10 +32,9 @@ void MainWindow::init(const QStringList &qls){
     }
 }
 
-bool MainWindow::open(){
+void MainWindow::open(){
     QString filename = QFileDialog::getOpenFileName(this);
     TabView()->openTab(filename);
-    return true;
 }
 
 

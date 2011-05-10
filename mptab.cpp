@@ -14,5 +14,14 @@ MPTab::MPTab(QWidget *parent) :
     setLayout(lay);
 }
 
+MPTextEdit* MPTab::TextEdit(){
+    return static_cast<MPTextEdit*>(layout()->itemAt(0)->widget());
+}
+
+void MPTab::setPlainText(const QString &text){
+    MPTextEdit *tedit = TextEdit();
+    tedit->setPlainText(text);
+}
+
 MPTab::~MPTab(){
 }

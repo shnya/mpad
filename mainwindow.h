@@ -21,7 +21,7 @@ public:
 
     void init(const QStringList &qls);
 public slots:
-    bool open();
+    void open();
 
 private:
     Ui::MainWindow *ui;
