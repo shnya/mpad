@@ -32,9 +32,62 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_FILE">
+    <property name="title">
+     <string>ファイル(&amp;F)</string>
+    </property>
+    <addaction name="action_NEW"/>
+    <addaction name="action_OPEN"/>
+    <addaction name="action_SAVE"/>
+    <addaction name="action_SAVE_AS"/>
+    <addaction name="action_QUIT"/>
+   </widget>
+   <addaction name="menu_FILE"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_NEW">
+   <property name="text">
+    <string>新規(&amp;N)</string>
+   </property>
+  </action>
+  <action name="action_OPEN">
+   <property name="text">
+    <string>開く(&amp;O)</string>
+   </property>
+  </action>
+  <action name="action_SAVE">
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_SAVE_AS">
+   <property name="text">
+    <string>名前をつけて保存(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_QUIT">
+   <property name="text">
+    <string>終了(&amp;Q)</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>action_QUIT</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

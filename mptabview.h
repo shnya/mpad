@@ -9,10 +9,13 @@ class MPTabView : public QTabWidget
 public:
     explicit MPTabView(QWidget *parent = 0);
     ~MPTabView();
+    bool newTab();
+    bool openTab(const QString &filename);
 
 signals:
 
 public slots:
+
 
 };
 

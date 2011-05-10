@@ -13,12 +13,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
     mptabview.cpp \
     mptab.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    mptextedit.cpp
 
 HEADERS  += \
     mptabview.h \
     mptab.h \
-    mainwindow.h
+    mainwindow.h \
+    mptextedit.h
 
 FORMS    += \
     mainwindow.ui
